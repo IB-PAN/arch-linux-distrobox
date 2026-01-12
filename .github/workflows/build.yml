@@ -87,6 +87,7 @@ jobs:
           oci: true
           extra-args: |
             --security-opt=seccomp=unconfined
+            --squash
 
       - name: Push to private registry
         uses: redhat-actions/push-to-registry@v2
