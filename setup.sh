@@ -41,6 +41,7 @@ tee -a /etc/pacman.conf <<'EOF'
 Include = /etc/pacman.d/mirrorlist.arch4edu
 EOF
 
-pacman -Syu --noconfirm bioarchlinux-keyring arch4edu-keyring mirrorlist.arch4edu pkgstats
+pacman -Sy --noconfirm archlinux-keyring bioarchlinux-keyring arch4edu-keyring
+pacman -Syu --noconfirm mirrorlist.arch4edu pkgstats
 pacman -Scc --noconfirm
 rm -rf /var/cache/pacman/pkg/*
